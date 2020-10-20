@@ -1,21 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+
+import {useFonts, Nunito_700Bold} from '@expo-google-fonts/nunito';
+import {AppLoading} from 'expo'
+
+
+import Routes from './src/routes/index'
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+  let [fontsLoaded] = useFonts({
+    Nunito_700Bold
+  });
+  
+  if(!fontsLoaded){
+    return <AppLoading/>;
+  }else{
+    <NavigationContainer>
+      <Routes/>
+    </NavigationContainer>
+  }
+  
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
