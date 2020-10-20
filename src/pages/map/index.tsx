@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import {Feather} from '@expo/vector-icons'
 
-import markerMap from  '../../images/map-marker.svg';
+import markerMap from  '../../images/Iconmarker.png';
 
 import style from './style';
 

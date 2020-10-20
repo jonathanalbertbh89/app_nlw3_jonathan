@@ -12,15 +12,21 @@ import Routes from './src/routes/index'
 export default function App() {
 
   let [fontsLoaded] = useFonts({
-    Nunito_700Bold
+    Nunito_700Bold,
   });
   
   if(!fontsLoaded){
     return <AppLoading/>;
   }else{
-    <NavigationContainer>
-      <Routes/>
-    </NavigationContainer>
+    return(
+
+      <NavigationContainer>
+        <Routes/>
+        <StatusBar/>
+      </NavigationContainer>
+
+    )
+    
   }
   
 }
