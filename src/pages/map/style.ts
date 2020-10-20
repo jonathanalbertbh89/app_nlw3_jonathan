@@ -47,7 +47,9 @@ const style = StyleSheet.create({
     },
 
     textFooter:{
-        color: '#8fa7b3'
+        color: '#8fa7b3',
+        fontSize: 14,
+        fontFamily: 'Nunito_700Bold'
     },
 
     buttonFooter:{

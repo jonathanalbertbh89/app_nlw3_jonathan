@@ -1,8 +1,10 @@
 import React from 'react';
+import {useNavigation} from '@react-navigation/native'
+
 import { View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps';
-import {Feather} from '@expo/vector-icons'
+import {Feather} from '@expo/vector-icons';
 
 import markerMap from  '../../images/Iconmarker.png';
 
@@ -10,7 +12,15 @@ import style from './style';
 
 export default function Map(){
     
-    
+    const navigation = useNavigation();
+
+    function handleOrphanageDetails(){
+        navigation.navigate('OrphanageDetails')
+    }
+
+    function navigateToCreateOrphanage(){
+        navigation.navigate('SelectPosition')
+    }
 
     return(
         <View style={style.container}>
@@ -39,7 +49,7 @@ export default function Map(){
 
                 <Callout 
                     tooltip
-                    onPress={()=>{alert('oi')}}
+                    onPress={handleOrphanageDetails}
                     >
                     <View style={style.containerCallout} >
                         <Text style={style.textCallout} >trabalho</Text>
@@ -55,7 +65,11 @@ export default function Map(){
                     2 orfanatos encontrados
                 </Text>
 
-                <TouchableOpacity style={style.buttonFooter}>
+                <TouchableOpacity style={style.buttonFooter}
+                    onPress={navigateToCreateOrphanage}
+
+                >
+
                     <Feather name="plus" size={20} color='#fff' />
                 </TouchableOpacity>
             </View>
