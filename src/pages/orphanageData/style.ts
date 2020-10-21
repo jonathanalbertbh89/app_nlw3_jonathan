@@ -37,7 +37,19 @@ const style = StyleSheet.create({
         marginBottom: 16,
         textAlignVertical: 'top',
       },
-    
+      
+      uploadedImageContainer:{
+        flexDirection: 'row'
+      },
+
+      uploadedImage:{
+        width: 64,
+        height: 64,
+        borderRadius: 20,
+        marginBottom: 32,
+        marginRight: 8
+      },
+
       imagesInput: {
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
         borderStyle: 'dashed',

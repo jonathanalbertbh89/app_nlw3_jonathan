@@ -82,6 +82,15 @@ const style = StyleSheet.create({
         borderColor: '#B3DAE2',
         borderRadius: 20,
       },
+
+      scheduleItemRed: {
+          backgroundColor:'#FEF6F9',
+          borderWidth: 1,
+          borderColor: '#FEF6F9',
+          borderRadius: 20,
+
+      },
+
     
       scheduleItemGreen: {
         backgroundColor: '#EDFFF6',
@@ -105,6 +114,10 @@ const style = StyleSheet.create({
         color: '#37C77F'
       },
     
+      scheduleTextRed: {
+        color: '#FEF6F9'
+      },
+
       contactButton: {
         backgroundColor: '#3CDC8C',
         borderRadius: 20,
